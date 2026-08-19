@@ -6,17 +6,19 @@
     <version>0.1.0</version>
 
     <vendor>Pravalika Satya</vendor>
+
     <icon>pluginIcon.svg</icon>
+
     <description><![CDATA[
         <p>
-            Detect potentially breaking Spring REST API changes
-            directly inside IntelliJ IDEA by comparing your
-            working tree with Git HEAD.
+            Detect potentially breaking Spring REST API changes directly
+            inside IntelliJ IDEA by comparing the current API surface
+            with the version stored at Git HEAD.
         </p>
         <p>
-            Detects endpoint additions and removals, HTTP method and
-            path changes, request parameter and request-body changes,
-            and response type changes.
+            Detects endpoint additions and removals, HTTP method and path
+            changes, request parameter and request-body changes, and
+            response type changes.
         </p>
     ]]></description>
 
@@ -29,4 +31,12 @@
                 anchor="right"
                 factoryClass="com.pravalika.springapiguard.toolWindow.ApiChangeGuardToolWindowFactory"/>
     </extensions>
+    <change-notes><![CDATA[
+    <p>Initial release of Spring API Change Guard.</p>
+    <ul>
+        <li>Detect Spring REST API changes against Git HEAD.</li>
+        <li>Detect endpoint, HTTP method, path, parameter, request-body, and response type changes.</li>
+        <li>Display detected API changes inside IntelliJ IDEA.</li>
+    </ul>
+]]></change-notes>
 </idea-plugin>

@@ -1,14 +1,14 @@
-# API Change Guard
+# Spring API Change Guard
 
-**API Change Guard** is an IntelliJ IDEA plugin that detects changes in Spring Boot REST APIs by comparing the current API surface with the version stored at the Git HEAD.
+**Spring API Change Guard** is an IntelliJ IDEA plugin that detects changes in Spring Boot REST APIs by comparing the current API surface with the version stored at the Git HEAD.
 
 It helps developers identify potentially breaking API changes early, directly from IntelliJ IDEA, before those changes reach downstream consumers.
 
-## Why API Change Guard?
+## Why Spring API Change Guard?
 
 Changing a REST API can unintentionally break clients, integrations, or other services that depend on it.
 
-API Change Guard provides a lightweight way to review API changes during development by comparing the current Spring API definitions against the previous Git version.
+Spring API Change Guard provides a lightweight way to review API changes during development by comparing the current Spring API definitions against the previous Git version.
 
 Instead of manually reviewing controller changes or switching between Git diffs and source files, developers can inspect detected API changes directly inside IntelliJ IDEA.
 
@@ -23,7 +23,7 @@ Instead of manually reviewing controller changes or switching between Git diffs 
 
 ## How It Works
 
-API Change Guard follows a simple comparison workflow:
+Spring API Change Guard follows a simple comparison workflow:
 
 ```
    Current Project              Git HEAD
@@ -73,11 +73,11 @@ public User getUser(@PathVariable Long userId) {
 }
 ```
 
-API Change Guard can detect the difference in the API definition and surface the change for review.
+Spring API Change Guard can detect the difference in the API definition and surface the change for review.
 
 ## Supported API Concepts
 
-API Change Guard currently focuses on Spring-based REST APIs and models information such as:
+Spring API Change Guard currently focuses on Spring-based REST APIs and models information such as:
 
 - HTTP endpoints
 - HTTP methods
@@ -92,12 +92,12 @@ Support for additional Spring API constructs may be added in future releases.
 
 ### From JetBrains Marketplace
 
-Once published, API Change Guard can be installed directly from IntelliJ IDEA:
+Once published, Spring API Change Guard can be installed directly from IntelliJ IDEA:
 
 1. Open **Settings / Preferences**.
 2. Select **Plugins**.
 3. Open the **Marketplace** tab.
-4. Search for **API Change Guard**.
+4. Search for **Spring API Change Guard**.
 5. Select **Install**.
 6. Restart IntelliJ IDEA if prompted.
 
@@ -122,7 +122,7 @@ You can then install the ZIP through **Settings → Plugins → ⚙ → Install 
 1. Open a Spring Boot project in IntelliJ IDEA.
 2. Make sure the project is managed by Git.
 3. Make changes to your Spring REST APIs.
-4. Open the **API Change Guard** tool window.
+4. Open the **Spring API Change Guard** tool window.
 5. Run the API analysis.
 6. Review the detected differences between the current project and Git HEAD.
 
@@ -211,8 +211,15 @@ src/
 
 ### API Change Analysis
 
-![API Change Guard comparing current workspace against git HEAD](./screenshots/api-change-analysis.png)
-![API Change Guard detecting a breaking API change](./screenshots/breaking-change-detection.png)
+![Spring API Change Guard comparing current workspace against Git HEAD](./screenshots/api-change-analysis.png)
+
+The tool window compares the current Spring REST API surface with the version stored at Git HEAD.
+
+### Breaking API Change Detection
+
+![Spring API Change Guard detecting a breaking API change](./screenshots/breaking-change-detection.png)
+
+Detected API changes are surfaced directly inside IntelliJ IDEA for review.
 ## Roadmap
 
 Potential future improvements include:
@@ -245,4 +252,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Pravalika Satya**
 
-If you find API Change Guard useful, consider giving the repository a ⭐.
+If you find Spring API Change Guard useful, consider giving the repository a ⭐.
