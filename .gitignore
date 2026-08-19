@@ -1,6 +1,26 @@
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ Platform Gradle Plugin
+.intellijPlatform/
+
+# Kotlin
+.kotlin/
+
+# OS files
 .DS_Store
-.gradle
-.idea
-.intellijPlatform
-.kotlin
-build
+Thumbs.db
+
+# Logs
+*.log
+
+# Local environment / secrets
+.env
+*.env
