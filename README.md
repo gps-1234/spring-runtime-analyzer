@@ -209,16 +209,10 @@ src/
 
 ## Screenshots
 
-Screenshots demonstrating API Change Guard in IntelliJ IDEA will be added here.
-
 ### API Change Analysis
 
-*Add screenshot showing the API Change Guard tool window and detected changes.*
-
-### API Change Details
-
-*Add screenshot showing the details of detected API changes.*
-
+![API Change Guard comparing current workspace against git HEAD](./screenshots/api-change-analysis.png)
+![API Change Guard detecting a breaking API change](./screenshots/breaking-change-detection.png)
 ## Roadmap
 
 Potential future improvements include:
