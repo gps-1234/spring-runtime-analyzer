@@ -20,7 +20,11 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
 
     intellijPlatform {
-        local("C:/Program Files/JetBrains/IntelliJ IDEA 2026.1")
+        if (System.getenv("INTELLIJ_LOCAL_PATH") != null) {
+            local(System.getenv("INTELLIJ_LOCAL_PATH")!!)
+        } else {
+            intellijIdea("2026.1.5")
+        }
 
         bundledPlugin("com.intellij.java")
 
@@ -41,9 +45,9 @@ java {
 intellijPlatform {
     pluginVerification {
         ides {
-            local(
-                file("C:/Program Files/JetBrains/IntelliJ IDEA 2026.1")
-            )
+            select {
+                version = "2026.1"
+            }
         }
     }
 }
